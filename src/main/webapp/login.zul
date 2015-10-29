@@ -1,0 +1,48 @@
+<zk xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd"
+    xmlns:w="client"
+    xmlns:h="http://www.zkoss.org/2005/zk/native">
+	<window id="loginWindow" border="normal" title="Welcome to zk-framework-demo!" width="350px" 
+		style="margin-left:auto;margin-right:auto;"
+    	apply="com.kthsoft.zkframework.composer.LoginComposer">
+        <grid>
+        	<columns visible="false">
+	            <column/><!-- define 2 columns to enable auxhead/er -->
+	            <column/>
+	        </columns>
+	        <auxhead>
+	            <auxheader colspan="2" label="Login Form" style="font-size:16px"/>
+	        </auxhead>
+            <rows>
+                <row> Username: 
+                    <textbox id="usernameTxb" />
+                </row>
+                <row> Password:
+                    <textbox id="passwordTxb" type="password" />
+                </row>
+            </rows>
+        </grid>
+        <h:br/>
+        <hbox>
+            <vbox width="350px" align="center">
+                <a href=""
+                   onClick="Executions.sendRedirect(&quot;/forgotPassword.zul&quot;)"
+                   label="Forgot password?"
+                   id="forgotPw" />
+            </vbox>
+        </hbox>
+        <h:br/>
+        <hbox>
+            <vbox width="350px" align="center">
+                <button id="loginBtn" label="Logga in" w:onClick='jq("$errDiv").fadeOut(500)' />
+            </vbox>
+        </hbox>
+        <hbox>
+            <vbox width="350px" align="center">
+                <div id="errDiv" >
+                    <label id="messageLbl" />
+                </div>
+            </vbox>
+        </hbox>
+    </window>
+</zk>
