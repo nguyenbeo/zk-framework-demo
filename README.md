@@ -5,7 +5,7 @@ A simple demo shows how ZK framework works. ZK framework is suitable for web-bas
 * And a simple landing page 
 
 # Technology
-* Java 8 (Lambada)
+* Java 8 (Lambda)
 * ZK Framework
 * Embedded Jetty
 
